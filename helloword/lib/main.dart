@@ -1,3 +1,61 @@
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        title: 'Flutter hello',
+        //theme: ThemeData(
+        //  colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 183, 58, 160)),
+        //  useMaterial3: true,
+        //),
+        theme: ThemeData(primarySwatch: Colors.pink),
+        home: const MyHomePage(title: "Home")  
+      ); //MaterialApp
+    }
+  }
+
+  class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+  final String title;
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.pink,
+        title: Text(
+          widget.title, //Home
+          style: const TextStyle(color: Colors.white),
+        ),
+      ),
+      body: const Center(
+        child: Text(
+          "Hello world", 
+          style: TextStyle(
+            color: Colors.white, 
+            fontSize: 40, 
+            fontWeight: FontWeight.bold, 
+            backgroundColor: Colors.red),),
+      ));
+  }
+}
+
+
+
+/*
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,7 +86,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 183, 127, 58)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -123,3 +181,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
