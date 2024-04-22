@@ -47,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           const Text('Counter value'), Text('$_counter', style: const TextStyle(color: Colors.red, fontSize:40),
+            Text('Counter value $_counter', style: const TextStyle(color: Colors.red, fontSize:40), 
+            // Text('$_counter', style: TextStyle(color: Colors.red, fontSize:40),
            )
           ],
         ),
